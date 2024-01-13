@@ -1,0 +1,17 @@
+server:
+  port: 6002
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/walletdb?createDatabaseIfNotExist = true
+    username: root
+    password: king
+  jpa:
+    hibernate.ddl-auto: create
+    show-sql: true
+  kafka:
+    consumer:
+      properties:
+          connections:
+            max:
+              idle:
+                ms: 86400000
